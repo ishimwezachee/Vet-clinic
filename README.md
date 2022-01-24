@@ -1,7 +1,7 @@
-# curriculum-databases-projects-template
+# Vet_Clinic
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> This is a project where I created SQL to create a table 
+> add some that in the table using SQL and queries those data based on the asked questions
 
 
 ## Getting Started
