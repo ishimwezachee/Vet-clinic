@@ -33,6 +33,39 @@ SELECT *
 FROM animals 
 WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 
+BEGIN;
+UPDATE animals SET species='unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+
+-- start a transaction
+BEGIN;
+-- animal end with mon 
+UPDATE animals 
+SET species = 'digimon'
+WHERE name LIKE '%mon';
+
+-- animal don't have species yet
+UPDATE animals 
+SET species = 'pokemon'
+WHERE species is NULL;
+
+-- commit the transaction
+COMMIT;
+
+
+BEGIN;
+DELETE FROM animals
+WHERE date_of_birth>'2022-01-01';
+SAVEPOINT borndate;
+UPDATE animals
+SET weight_kg = weight_kg*-1;
+ROLLBACK TO borndate;
+UPDATE animals
+SET weight_kg = weight_kg*-1
+WHERE weight_kg<0;
+COMMIT;
+
 -- How many animals are there?
 SELECT COUNT(*) FROM animals;
 -- How many animals have never tried to escape?
