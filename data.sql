@@ -13,3 +13,19 @@ INSERT INTO animals (id,name,date_of_birth,escape_attempts,neutered,weight_kg) V
 INSERT INTO animals (id,name,date_of_birth,escape_attempts,neutered,weight_kg) VALUES(8,'Angemon','2005-5-12',1,TRUE,-45);
 INSERT INTO animals (id,name,date_of_birth,escape_attempts,neutered,weight_kg) VALUES(9,'Boarmon','2005-5-7',7,TRUE,20.4);
 INSERT INTO animals (id,name,date_of_birth,escape_attempts,neutered,weight_kg) VALUES(10,'Blossom','1998-10-13',3,TRUE,17);
+-- owners
+INSERT INTO owners(owner_id,full_name,age) VALUES (1,'sam smith',34);
+INSERT INTO owners(owner_id,full_name,age) VALUES (2,'Jennifer Orwell',19);
+INSERT INTO owners(owner_id,full_name,age) VALUES (3,'Bob',45);
+INSERT INTO owners(owner_id,full_name,age) VALUES (4,'Melody Pond',77);
+INSERT INTO owners(owner_id,full_name,age) VALUES (5,'Dean Winchester',14);
+INSERT INTO owners(owner_id,full_name,age) VALUES (6,'Jodie Whittaker',38);
+-- Species
+INSERT INTO species(species_id,name) VALUES (1,'pokemon');
+INSERT INTO species(species_id,name) VALUES (2,'Digimon');
+
+--Modify your inserted animals so it includes the species_id value:
+--If the name ends in "mon" it will be Digimon
+UPDATE animals SET species_id=2 WHERE name LIKE '%mon';
+--All other animals are Pokemon
+UPDATE animals SET species_id=1;
