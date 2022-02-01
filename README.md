@@ -3,6 +3,9 @@
 > This is a project where I created SQL to create a table 
 > add some that in the table using SQL and queries those data based on the asked questions
 
+## Database Schema Diagram
+
+![schema diagram](/screenshots/Untitled%20Diagram.drawio.png)
 
 ## Getting Started
 
